@@ -1,0 +1,22 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a[10] = {1000 , 500 , 200 , 100 , 50 , 20 , 10 , 5 , 2 , 1}  ; 
+    int n ; cin >> n ; 
+    long long  sum = 0 ;
+    for(int x : a ){
+        while(n/x!= 0 ){
+            sum += n/x ; 
+            n = n%x ; 
+        }
+    }
+    cout << sum  ;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
