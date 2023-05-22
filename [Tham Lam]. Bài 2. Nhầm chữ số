@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    string s1 , s2  ; cin >> s1 >> s2 ; 
+    string a ="" , b ="" , c = "" , d="" ; 
+    for(char x : s1){
+        // luu xau lon nhat , be nhat cua s1
+        if(x =='5' || x=='6'){
+            a += '6' ; b += '5' ; 
+        }
+        else {
+            a += x ; b += x ; 
+        }
+    }
+    for(char x : s2){
+        // luu xau lon nhat , be nhat cua s2
+        if(x=='6'|| x=='5'){
+             c += '6' ; d+='5' ; 
+        }
+        else {
+            c += x ; d += x ; 
+        }
+    }
+    cout << stoll(a) + stoll(c) << ' ' << stoll(b) + stoll(d) ; 
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
