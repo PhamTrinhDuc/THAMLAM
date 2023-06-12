@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    string s ; cin >> s ; 
+    vector<string > v ; 
+    for(int i=0 ; i<s.size() ; i++ ){
+        if(s[i]=='0' ) s[i]=' ' ;  
+    }
+    string tmp ;
+    stringstream ss(s) ; 
+    while(ss >> tmp  ){
+        v.push_back(tmp) ; 
+    }
+    sort(v.begin() , v.end() , greater<string>() )  ;
+    int sum = v[0].size() ; 
+    for(int i=2; i<v.size() ;  i++ ){
+        if(i%2==0) sum += v[i].size() ;  
+    }
+    cout << sum ; 
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
